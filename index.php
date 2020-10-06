@@ -28,17 +28,10 @@
   <body>
     <div class="container">
       <?php
-        foreach ($faqs as $faq) {
-          //var_dump($faq);
-          foreach ($faq as $k => $faq_element) {
-            echo $faq_element."<br>";
-          }
-          echo "<hr>";
-        };
-      ?>
+        foreach ($faqs as $faq) { ?>
+          <h2><?php echo $faq["question"] ?></h2>
+          <p><?php echo $faq["answer"] ?></p>
+      <?php };?>
     </div>
-    <h2>Domanda</h2>
-    <p>Risposta</p>
-
   </body>
 </html>
