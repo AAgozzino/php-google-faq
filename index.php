@@ -41,18 +41,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Google FAQ</title>
-    <link rel="stylesheet" href="dist/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  
+
   <body>
-    <a href="#"></a>
-    <div class="container">
-      <?php foreach ($faqs as $faq) { ?>
-        <h2><?php echo $faq["question"] ?></h2>
-        <?php foreach ($faq["answer"] as $par): ?>
-          <p><?php echo $par ?></p>
-        <?php endforeach; ?>
-      <?php };?>
-    </div>
+    <!-- HEADER -->
+    <header>
+      <!-- Header top -->
+      <div class="header-top flex-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png" alt="Logo Google">
+        </div>
+        <!-- /Logo -->
+        <!-- Page title -->
+        <h2 class="page-title">Privacy e termini</h2>
+        <!-- /Page title -->
+
+      </div>
+      <!-- /Header top -->
+      <!-- Header bottom -->
+      <div class="header-bottom flex-container">
+        <!-- Nav -->
+        <nav class="nav">
+          <ul class="nav-list menu-inline">
+            <li class="nav-list-item">
+              <a href="#">Introduzione</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#">Norme sulla privacy</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#">Termini di servizio</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#">Tecnologie</a>
+            </li>
+            <li class="nav-list-item active">
+              <a href="#">Domande frequenti</a>
+              </li>
+          </ul>
+        </nav>
+        <!-- /nav -->
+        <!-- Profile -->
+        <div class="profile flex-container">
+          <div class="profile-logo">
+            <img src="https://lh5.googleusercontent.com/-IhrleZBEhCU/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclRSPEPkckrdQu0roRZ4aohsu2hOA/il/photo.jpg" alt="Logo profile">
+          </div>
+          <div class="profile-email">
+            add@gmail.com
+          </div>
+
+        </div>
+        <!-- /Profile -->
+
+      </div>
+      <!-- /Header bottom -->
+    </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main>
+      <div class="container">
+        <?php foreach ($faqs as $faq) { ?>
+          <h2><?php echo $faq["question"] ?></h2>
+          <?php foreach ($faq["answer"] as $par): ?>
+            <p><?php echo $par ?></p>
+          <?php endforeach; ?>
+        <?php };?>
+      </div>
+    </main>
+    <!-- /MAIN -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container flex-container">
+        <nav class="nav-terms">
+          <ul class="nav-list menu-inline">
+            <li class="nav-list-item">
+              <a href="#">Google</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#">Tutto su Google</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#">Privacy</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#">Termini</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-lang">
+          <div class="languages-image flex-container">
+            <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAABGdBTUEAALGPC/xhBQAAAFpQTFRFAAAAc8b%2BeNj%2BeLL7lt3/YbL4cs/9rNn8p9b7%2Bfn5hdD/a8D/7vD/vOL9itf%2B////3PD%2Byuj9R6348Pb7KZz2UL78MKL3Oqv4Zsz/ndX8qN/%2BI5T0S7X4W8b9mmuivQAAAAF0Uk5TAEDm2GYAAACXSURBVBjTXYqLEsIwCARR%2B27zpCFNxP//TSGOTu3OhDs2wGaPM9bD8hKGMDtnDq130GkxDK/BY/tVc6CtXa21Q72ClFKoqUrINBLAzHP9grKpccxFYmqNIcY4j%2BXDiLJBztmUXCRkGgkgIsZbO1kwEjVDKwYmDriSGt6FPHrnp6x1Bd/vzxP9Bj8mFfBH2K8Gtng1AA95bxQhE7o%2B68UQAAAAAElFTkSuQmCC" alt="Select language">
+            <select class="languages" name="languages">
+              <option value="it">Italiano</option>
+              <option value="de">Deutsch</option>
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="ja">日本語</option>
+              <option value="zh-CN">中文（简体中文</option>
+            </select>
+        </div>
+        </nav>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
+
   </body>
 </html>
